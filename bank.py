@@ -55,18 +55,21 @@ def play_game(players, rounds):
 
 def main():
     players = [
-        OverScoreThresholdPlayer("OverOneHundredPlayer", 100), 
-        OverDoublesThresholdPlayer("TwoDoublesPlayer", 2),
-        OverDoublesThresholdPlayer("ThreeDoublesPlayer", 3),
-        OverScoreThresholdPlayer("OverThreeHundredPlayer", 300),
-        OverScoreThresholdPlayer("OverOneThousandPlayer", 1000),
-        ScoreAndDoublesThresholdPlayer("OverTwoDoublesAndOverTwoHundredPlayer", 2, 300)
+        OverScoreThresholdPlayer("Over100Player", 100), 
+        OverScoreThresholdPlayer("Over200Player", 200), 
+        OverScoreThresholdPlayer("Over300Player", 300), 
+        OverScoreThresholdPlayer("Over400Player", 400), 
+        OverScoreThresholdPlayer("Over500Player", 500),
+        OverScoreThresholdPlayer("Over600Player", 600),
+        OverScoreThresholdPlayer("Over700Player", 700),
+        OverScoreThresholdPlayer("Over800Player", 800),
+        OverScoreThresholdPlayer("Over900Player", 900)
     ]
-    games = 10000
-    rounds = 10
+    GAMES = 10000
+    ROUNDS = 20
     
-    for i in range(0, games):
-        play_game(players, rounds)
+    for i in range(0, GAMES):
+        play_game(players, ROUNDS)
 
     players.sort(key=lambda p: p.name)
 
