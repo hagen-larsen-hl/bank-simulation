@@ -1,0 +1,2 @@
+1. As written, you will need to install the `tabulate` package to view the outputted results. Or you can change how things are printed.
+2. You can just tweak the global variables `GAMES` AND `ROUNDS` then run `python bank.py`, maybe I'll add those as CLI arguments.
